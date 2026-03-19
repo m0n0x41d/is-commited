@@ -323,7 +323,7 @@ def generate_html(stats: dict, terminal: list[dict], timeline: list[dict]) -> st
         color_map = {"SUCCESS": "#007AFF", "WARNING": "#FF5F1F", "SYSTEM": "#94A3B8"}
         c = color_map.get(entry["status"], "#94A3B8")
         msg = entry["msg"]
-        msg = re.sub(r'WeAreOcta/[\w\-\.]+', '***', msg)
+        msg = re.sub(r'\w+Octa/[\w\-\.]+', '***', msg)
         terminal_log_html += f'''<div class="log-line"><span class="log-ts">{entry["time"]}</span> <span style="color:{c};">[{entry["status"]}]</span> <span class="log-msg">{msg}</span></div>\n'''
 
     # ── Weekday bars ──
