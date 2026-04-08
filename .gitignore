@@ -2,3 +2,4 @@ data/raw_commits.tsv
 design_scratch*.html
 scripts/collect.sh
 Taskfile.yml
+__pycache__/
